@@ -119,7 +119,7 @@ static bool apply_retroarch_to_game(const char *games_path, const char *game_pat
 				patched = false;
 			} else {
 				// Now append the --retroarch command line to this line
-				snprintf(line, sizeof line, "%s --retroarch", line);
+				strcat(line, " --retroarch");
 				patched = true;
 			}
 		} else if (!strncmp(line, "Name=", 5)) {
